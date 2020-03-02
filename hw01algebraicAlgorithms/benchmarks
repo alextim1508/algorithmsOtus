@@ -1,0 +1,19 @@
+1) Возведение в степень
+Input data: 1.000001, 1_000_000
+Benchmark                                                   Mode  Cnt        Score        Error  Units
+ExponentiationBenchmark.simple                              avgt    9  1621858,800 ± 325805,234  ns/op
+ExponentiationBenchmark.withHelpBinaryDecompositionOfPower  avgt    9       47,837 ±      6,881  ns/op
+ExponentiationBenchmark.withHelpPowerOf2                    avgt    9   826474,587 ±  85694,309  ns/op
+
+2) Поиск простых чисел
+Input data: 100_000
+Benchmark                                                  Mode  Cnt     Score     Error  Units
+PrimeNumberBenchmark.getPrimeNumberCount                     ss    5  993,031 ± 127,350  ms/op
+PrimeNumberBenchmark.getPrimeNumberCountWithOptimizations    ss    5    6,025 ±   1,315  ms/op
+
+3) Решето Эратосфена
+Input data: 100_000
+Benchmark                                                            Mode  Cnt  Score   Error  Units
+EratosthenSieveBenchmark.getPrimeNumberCount                           ss    5  0,516 ± 0,539  ms/op
+EratosthenSieveBenchmark.getPrimeNumberCountWithLineComplexity         ss    5  0,821 ± 0,267  ms/op
+EratosthenSieveBenchmark.getPrimeNumberCountWithMemoryOptimizations    ss    5  1,405 ± 0,426  ms/op
