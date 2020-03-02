@@ -18,7 +18,7 @@ public class EratosthenSieve {
         this.isPrimeNumbers = new boolean[range];
         Arrays.fill(isPrimeNumbers, true);
 
-        this.isOptPrimeNumber = new int[(int)Math.ceil(8*Integer.BYTES)];
+        this.isOptPrimeNumber =  new int[(int)Math.ceil(range/32.)];
         Arrays.fill(isOptPrimeNumber, 0xFFFFFFFF);
 
         leastPrime = new int[getPrimeNumberCount()*RANGE];
@@ -99,4 +99,5 @@ public class EratosthenSieve {
         number &= ~(1 << bitNumber);
         return number;
     }
+
 }

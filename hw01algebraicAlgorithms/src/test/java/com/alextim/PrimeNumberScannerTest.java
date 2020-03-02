@@ -16,7 +16,7 @@ public class PrimeNumberScannerTest {
 
     @BeforeAll
     public static void setUp() {
-        scanner = new PrimeNumberScanner(1_000);
+        scanner = new PrimeNumberScanner(100_000);
     }
 
     @Test
@@ -52,8 +52,12 @@ public class PrimeNumberScannerTest {
     @Test
     public void getPrimeNumberCountTest() {
         scanner.clearPrimeNumbers();
-        Assertions.assertEquals(168, scanner.getPrimeNumberCount());
+        Assertions.assertEquals(9592, scanner.getPrimeNumberCount());
     }
 
-
+    @Test
+    public void getPrimeNumberCountWithOptimizationsTest() {
+        scanner.clearPrimeNumbers();
+        Assertions.assertEquals(9592, scanner.getPrimeNumberCountWithOptimizations());
+    }
 }
