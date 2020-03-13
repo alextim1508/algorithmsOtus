@@ -1,0 +1,14 @@
+Benchmark                                           (size)  Mode  Cnt     Score     Error  Units
+NearlySortingBenchmark.heapSortNearlySorting       1000000    ss    5   122,778 ±  97,042  ms/op
+NearlySortingBenchmark.shellSortGap1NearlySorting  1000000    ss    5   140,662 ±  66,738  ms/op
+NearlySortingBenchmark.shellSortGap2NearlySorting  1000000    ss    5   175,789 ±  51,172  ms/op
+NearlySortingBenchmark.shellSortGap3NearlySorting  1000000    ss    5   190,392 ±  67,191  ms/op
+NearlySortingBenchmark.shellSortGap4NearlySorting  1000000    ss    5   202,427 ±  87,330  ms/op
+NearlySortingBenchmark.shellSortGap5NearlySorting  1000000    ss    5   199,564 ±  78,866  ms/op
+
+RandomSortingBenchmark.heapSortRandom              1000000    ss    5   200,702 ±  64,489  ms/op
+RandomSortingBenchmark.shellSortGap1Random         1000000    ss    5   218,681 ±  80,897  ms/op
+RandomSortingBenchmark.shellSortGap2Random         1000000    ss    5   216,490 ± 125,558  ms/op
+RandomSortingBenchmark.shellSortGap3Random         1000000    ss    5  1019,502 ± 132,325  ms/op
+RandomSortingBenchmark.shellSortGap4Random         1000000    ss    5  1020,071 ± 139,643  ms/op
+RandomSortingBenchmark.shellSortGap5Random         1000000    ss    5   253,848 ± 174,428  ms/op

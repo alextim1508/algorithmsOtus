@@ -1,11 +1,24 @@
 package com.alextim;
 
 import java.util.Random;
+import java.util.function.Function;
 
 public class Sort {
 
     public static int[] createRandomArray(int size, int bound) {
         return new Random().ints(size, -1*bound, bound).toArray();
+    }
+
+    public static int[] createNearlySortedArray(int size, double percent) {
+        int[] array = new int[size];
+        for (int i = 0; i < size; i++) {
+            array[i] = i;
+        }
+        Random random = new Random();
+        for (int i = 0; i < Math.round(percent*size/100); i++) {
+            array[random.nextInt(size)] = random.nextInt(size);
+        }
+        return array;
     }
 
     public static void bubbleSort(int[] array) {
@@ -41,12 +54,15 @@ public class Sort {
             for (; j>=0 && array[j]>insert; j--) {
                 array[j+1] = array[j];
             }
-            array[j+1] = insert;
+            if(j != i-1)
+                array[j+1] = insert;
         }
     }
 
-    public static void shellSort(int[] array) {
-        for (int g = array.length/2; g > 0; g/=2) {
+    public static void shellSort(int[] array, Function<Integer, Integer> getGap, int k, int delta) {
+        int g;
+        do {
+            g = getGap.apply(k);
             for (int i = 0; i < array.length - g; i++) {
                 int j = i + g;
                 int insert = array[j];
@@ -54,9 +70,11 @@ public class Sort {
                 for (;j - g >= 0 && array[j - g] > insert; j -=g) {
                     array[j] = array[j - g];
                 }
-                array[j] = insert;
+                if(j != i+g)
+                    array[j] = insert;
             }
-        }
+            k+= delta;
+        } while (g!=1);
     }
 
     public static void heapSort(int[] array) {
