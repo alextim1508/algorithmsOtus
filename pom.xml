@@ -11,6 +11,7 @@
     <modules>
         <module>testingSystem</module>
         <module>hw01algebraicAlgorithms</module>
+        <module>hw06avlTree</module>
     </modules>
 
     <developers>
