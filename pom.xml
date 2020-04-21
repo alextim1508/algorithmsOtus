@@ -12,6 +12,7 @@
         <module>testingSystem</module>
         <module>hw01algebraicAlgorithms</module>
         <module>hw03basicDataStructures</module>
+        <module>hw04shellHeapSort</module>
     </modules>
 
     <developers>
