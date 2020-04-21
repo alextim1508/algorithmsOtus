@@ -54,6 +54,9 @@ public class RandomizedTree  extends BalanceTree {
 
     @Override
     Node insert(Node newNode, Node node, Function<Node, Node> handler) {
+        if(node == null)
+            return newNode;
+
         if(lottery((RandomizedNode)node))
             return insertRoot((RandomizedNode)newNode, (RandomizedNode)node);
 
@@ -80,19 +83,15 @@ public class RandomizedTree  extends BalanceTree {
     }
 
     boolean lottery(RandomizedNode p, RandomizedNode q) {
-        boolean res = new Random().nextInt() % (p.size + q.size) < p.size;
-        System.out.println("lottery 1 " +res);
-        return res;
+        return new Random().nextInt() % (p.size + q.size) < p.size;
     }
 
     boolean lottery(RandomizedNode node) {
-        boolean res =  new Random().nextInt() % (node.size+1) == 0;
-        System.out.println(node.size + " lottery 2 " +res);
-        return res;
+        return new Random().nextInt() % (node.size + 1) == 0;
     }
 
     public static class RandomizedNode extends Node {
-        int size;
+        int size = 1;
 
         public RandomizedNode(int key, Object value) {
             super(key, value);

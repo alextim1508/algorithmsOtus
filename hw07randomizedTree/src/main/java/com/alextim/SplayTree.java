@@ -44,8 +44,9 @@ public class SplayTree extends BalanceTree {
         }
     }
 
-    Node search(Node root, int key) {
-        return splay(root, key);
+    @Override
+    Node search(int key, Node node) {
+        return this.root = splay(node, key);
     }
 
     @Override
@@ -55,6 +56,7 @@ public class SplayTree extends BalanceTree {
 
     Node insert(Node newNode, Node node) {
         node = splay(node, newNode.key);
+
         if (node.key == newNode.key)
             return node;
 
@@ -72,7 +74,7 @@ public class SplayTree extends BalanceTree {
 
     @Override
     public void remove(int key) {
-        Node removed = search(root, key);
-        join(removed.left, removed.right, node -> {}, (node1, node2) -> new Random().nextInt(2) == 1);
+        Node removed = search(key, root);
+        this.root = join(removed.left, removed.right, node -> { }, (node1, node2) -> new Random().nextInt(2) == 1);
     }
 }

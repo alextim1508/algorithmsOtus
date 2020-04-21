@@ -7,58 +7,50 @@ import java.util.List;
 import java.util.Random;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import static com.alextim.TreeTestHelper.createKeysTree;
 import static com.alextim.TreeTestHelper.toList;
 
 public class RandomTreeTest {
 
+    private final int SIZE = 100_000;
+
     @Test
     public void insertRootTest() {
         Random random = new Random();
-        RandomizedTree.RandomizedNode root = new RandomizedTree.RandomizedNode(200, "=");
+        RandomizedTree.RandomizedNode root = new RandomizedTree.RandomizedNode(SIZE/2, "=");
         RandomizedTree tree = new RandomizedTree(root) {
             @Override
             boolean lottery(RandomizedNode node) {
                 return false;
             }
         };
-        for (int i = 0; i < 100; i++) {
-            tree.insert(new RandomizedTree.RandomizedNode(random.nextInt(400), "-"));
+        for (int i = 0; i < SIZE; i++) {
+            tree.insert(new RandomizedTree.RandomizedNode(random.nextInt(SIZE), "-"));
         }
 
-        int key = random.nextInt(400);
+        int key = random.nextInt(SIZE);
         tree.root = tree.insertRoot(new RandomizedTree.RandomizedNode(key, "="), root);
 
         List<Integer> keys = toList(tree);
-        Assertions.assertEquals( key, keys.get(0).intValue());
+        Assertions.assertEquals(key, keys.get(0).intValue());
    }
 
     @Test
-    public void insertTest() {
-        int[] keysTree = createKeysTree(4, 1000);
-        Tree tree = toTree(keysTree);
+    public void balanceTest() {
+        RandomizedTree tree = new RandomizedTree(new RandomizedTree.RandomizedNode(SIZE/2, "="));
+        for (int i = 0; i < SIZE; i++) {
+            tree.insert(new RandomizedTree.RandomizedNode(i, "-"));
+        }
 
-        tree.remove(375);
-
-        List<Integer> res = toList(tree);
-        System.out.println("res.size() = " + res.size());
-
-        AtomicInteger maxSize = new AtomicInteger();
-
-        tree.levelOrder(node -> {
-            int size = ((RandomizedTree.RandomizedNode) node).size;
-            if(size>maxSize.intValue())
-                maxSize.set(size);
-        });
+        int leafCount = getLeafCountBySizeNode(tree);
+        Assertions.assertTrue(leafCount < SIZE/3);
     }
 
-
-
-    private Tree toTree(int[] array) {
-        Tree tree = new RandomizedTree(new RandomizedTree.RandomizedNode(array[0], "value" + array[0]));
-        for (int i = 1; i < array.length; i++) {
-            tree.insert(new RandomizedTree.RandomizedNode(array[i], "value" + array[i]));
-        }
-        return tree;
+    private int getLeafCountBySizeNode(RandomizedTree tree) {
+        AtomicInteger leafCount = new AtomicInteger();
+        tree.levelOrder(node -> {
+            if(((RandomizedTree.RandomizedNode) node).size == 1)
+                leafCount.incrementAndGet();
+        });
+        return leafCount.get();
     }
 }
