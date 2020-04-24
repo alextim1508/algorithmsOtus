@@ -13,6 +13,7 @@
         <module>hw01algebraicAlgorithms</module>
         <module>hw03basicDataStructures</module>
         <module>hw04shellHeapSort</module>
+        <module>hw08segmentTree</module>
     </modules>
 
     <developers>
