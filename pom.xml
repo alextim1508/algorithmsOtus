@@ -13,6 +13,7 @@
         <module>hw01algebraicAlgorithms</module>
         <module>hw03basicDataStructures</module>
         <module>hw04shellHeapSort</module>
+        <module>hw10graph</module>
     </modules>
 
     <developers>
@@ -95,7 +96,7 @@
                     <appendAssemblyId>false</appendAssemblyId>
                     <archive>
                         <manifest>
-                            <mainClass>com.alextim.Main</mainClass>
+                            <mainClass>com.alextim.com.alextim.Graph</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
