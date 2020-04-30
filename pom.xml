@@ -11,6 +11,7 @@
     <modules>
         <module>testingSystem</module>
         <module>hw01algebraicAlgorithms</module>
+        <module>hw06avlTree</module>
         <module>hw03basicDataStructures</module>
         <module>hw04shellHeapSort</module>
         <module>hw09myHashMap</module>
