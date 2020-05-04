@@ -11,10 +11,12 @@
     <modules>
         <module>testingSystem</module>
         <module>hw01algebraicAlgorithms</module>
+        <module>hw02bitArithmetic</module>
         <module>hw03basicDataStructures</module>
         <module>hw04shellHeapSort</module>
         <module>hw09myHashMap</module>
         <module>hw08segmentTree</module>
+        <module>hw11graphSort</module>
     </modules>
 
     <developers>
