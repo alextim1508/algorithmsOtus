@@ -14,8 +14,11 @@
         <module>hw02bitArithmetic</module>
         <module>hw03basicDataStructures</module>
         <module>hw04shellHeapSort</module>
-        <module>hw09myHashMap</module>
+        <module>hw06avlTree</module>
+        <module>hw07randomizedTree</module>
         <module>hw08segmentTree</module>
+        <module>hw09myHashMap</module>
+        <module>hw10graph</module>
         <module>hw11graphSort</module>
     </modules>
 
@@ -99,7 +102,7 @@
                     <appendAssemblyId>false</appendAssemblyId>
                     <archive>
                         <manifest>
-                            <mainClass>com.alextim.Main</mainClass>
+                            <mainClass>com.alextim.com.alextim.Graph</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
