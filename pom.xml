@@ -12,6 +12,12 @@
         <module>testingSystem</module>
         <module>hw01algebraicAlgorithms</module>
         <module>hw07randomizedTree</module>
+        <module>hw06avlTree</module>
+        <module>hw03basicDataStructures</module>
+        <module>hw04shellHeapSort</module>
+        <module>hw10graph</module>
+        <module>hw09myHashMap</module>
+        <module>hw08segmentTree</module>
     </modules>
 
     <developers>
@@ -94,7 +100,7 @@
                     <appendAssemblyId>false</appendAssemblyId>
                     <archive>
                         <manifest>
-                            <mainClass>com.alextim.Main</mainClass>
+                            <mainClass>com.alextim.com.alextim.Graph</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

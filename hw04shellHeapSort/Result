@@ -1,0 +1,9 @@
+Size 10_000_000
+
+                                            Random          NearlySorted
+heap                                        1s 902ms        3s 202ms
+shell with gap sequence 2N/2^(k+1) + 1      1s 348ms        3s 207ms
+shell with gap sequence N/2^(k+1)           1s 487ms        3s 371ms
+shell with gap sequence 2^k +1              4m 20s 703ms    16s 217ms
+shell with gap sequence 2^k -1              4m 6s 41ms      16s 294ms
+shell with gap sequence N/2^k               3s 951ms        3s 816ms

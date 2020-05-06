@@ -1,0 +1,34 @@
+Динамические массивы:
+SingleArray
+VectorArray с длиной вектора 10
+FactorArray с коэффициентом 2
+MatrixArray с внутренним массивом VectorArray(10) и длинной строки 10
+java.utilArrayList
+
+
+1) Добавление в начало
+Input data: 100_000
+Benchmark                                  Mode  Cnt      Score      Error  Units
+BeginInsertion.startAdditionSingleArray      ss    5   4584,610 ± 1935,143  ms/op
+BeginInsertion.startAdditionVectorArray      ss    5   1802,506 ± 1258,645  ms/op
+BeginInsertion.startAdditionFactorArray      ss    5   1556,869 ±  369,541  ms/op
+BeginInsertion.startAdditionMatrixArray      ss    5  11043,084 ± 1248,978  ms/op
+BeginInsertion.startAdditionArrayList        ss    5   1118,800 ± 1061,694  ms/op
+
+2) Добавление в конец
+Input data: 100_000
+Benchmark                                  Mode  Cnt      Score      Error  Units
+EndInsertion.endAdditionSingleArray          ss    5   3513,716 ±  906,321  ms/op
+EndInsertion.endAdditionVectorArray          ss    5    603,388 ±  200,425  ms/op
+EndInsertion.endAdditionFactorArray          ss    5     13,815 ±    8,522  ms/op
+EndInsertion.endAdditionMatrixArray          ss    5     26,402 ±    5,589  ms/op
+EndInsertion.endAdditionArrayList            ss    5     14,806 ±   17,666  ms/op
+
+3) Добавление случайно
+Input data: 100_000
+Benchmark                                  Mode  Cnt      Score      Error  Units
+RandomInsertion.randomAdditionSingleArray    ss    5   3755,287 ± 1258,307  ms/op
+RandomInsertion.randomAdditionVectorArray    ss    5    577,328 ±  107,126  ms/op
+RandomInsertion.randomAdditionFactorArray    ss    5     25,988 ±   15,965  ms/op
+RandomInsertion.randomAdditionMatrixArray    ss    5     30,053 ±   17,626  ms/op
+RandomInsertion.endAdditionArrayList         ss    5     23,590 ±   14,916  ms/op
