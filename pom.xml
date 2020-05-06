@@ -11,13 +11,15 @@
     <modules>
         <module>testingSystem</module>
         <module>hw01algebraicAlgorithms</module>
-        <module>hw07randomizedTree</module>
-        <module>hw06avlTree</module>
+        <module>hw02bitArithmetic</module>
         <module>hw03basicDataStructures</module>
         <module>hw04shellHeapSort</module>
-        <module>hw10graph</module>
-        <module>hw09myHashMap</module>
+        <module>hw06avlTree</module>
+        <module>hw07randomizedTree</module>
         <module>hw08segmentTree</module>
+        <module>hw09myHashMap</module>
+        <module>hw10graph</module>
+        <module>hw11graphSort</module>
     </modules>
 
     <developers>
