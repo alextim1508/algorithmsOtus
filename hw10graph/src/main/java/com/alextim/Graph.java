@@ -9,8 +9,8 @@ import java.util.function.Consumer;
 
 public class Graph {
 
-    private final int[][] adjacencyVector;
-    private final boolean[] isUsed;
+    final int[][] adjacencyVector;
+    final boolean[] isUsed;
 
     public Graph(int[][] adjacencyVector) {
         this.adjacencyVector = adjacencyVector;

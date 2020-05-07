@@ -2,16 +2,14 @@ package com.alextim;
 
 import com.google.common.primitives.Ints;
 
+
 import java.util.*;
 
-public class Graph {
+public class SortedGraph extends Graph {
 
-    private final int[][] adjacencyVector;
-    private final boolean[] isUsed;
+    public SortedGraph(int[][] adjacencyVector) {
+        super(adjacencyVector);
 
-    public Graph(int[][] adjacencyVector) {
-        this.adjacencyVector = adjacencyVector;
-        isUsed = new boolean[adjacencyVector.length];
     }
 
     public int[][] sort(String algorithm) {

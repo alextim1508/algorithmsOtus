@@ -37,6 +37,7 @@
         <guava.version>27.1-jre</guava.version>
         <junit5.version>5.3.2</junit5.version>
         <jmh.version>1.21</jmh.version>
+        <joou.version>0.9.4</joou.version>
     </properties>
 
     <dependencyManagement>
@@ -45,6 +46,12 @@
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
                 <version>${guava.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.jooq</groupId>
+                <artifactId>joou</artifactId>
+                <version>${joou.version}</version>
             </dependency>
 
             <dependency>
@@ -102,7 +109,7 @@
                     <appendAssemblyId>false</appendAssemblyId>
                     <archive>
                         <manifest>
-                            <mainClass>com.alextim.com.alextim.Graph</mainClass>
+                            <mainClass>com.alextim.Main</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

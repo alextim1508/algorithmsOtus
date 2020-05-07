@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-public class GraphTest {
+public class SortedGraphTest {
 
     int[][] vectors = {
             {2, 12},
@@ -23,11 +23,11 @@ public class GraphTest {
             {5}
     };
 
-    private Graph graph;
+    private SortedGraph graph;
 
     @BeforeEach
     public void setUp() {
-        graph = new Graph(vectors);
+        graph = new SortedGraph(vectors);
     }
 
     @Test
