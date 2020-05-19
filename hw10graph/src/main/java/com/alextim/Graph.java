@@ -9,8 +9,8 @@ import java.util.function.Consumer;
 
 public class Graph {
 
-    final int[][] adjacencyVector;
-    final boolean[] isUsed;
+    int[][] adjacencyVector;
+    boolean[] isUsed;
 
     public Graph(int[][] adjacencyVector) {
         this.adjacencyVector = adjacencyVector;
@@ -73,12 +73,12 @@ public class Graph {
         return result;
     }
 
-    public void breadthFirstSearch(Consumer<Integer> consumer) {
+    public void breadthFirstSearch(int index, Consumer<Integer> vertexConsumer) {
         Arrays.fill(isUsed, false);
-        breadthFirstSearch(adjacencyVector, isUsed, 0, consumer);
+        breadthFirstSearch(adjacencyVector, isUsed, index, vertexConsumer);
     }
 
-    private void breadthFirstSearch(int[][] vector, boolean[] isUsed, int vertex, Consumer<Integer> consumer) {
+    private void breadthFirstSearch(int[][] vector, boolean[] isUsed, int vertex, Consumer<Integer> vertexConsumer) {
         Queue<Integer> queue = new LinkedList<>();
         queue.add(vertex);
 
@@ -86,7 +86,7 @@ public class Graph {
             Integer v = queue.poll();
             if(!isUsed[v]) {
                 isUsed[v] = true;
-                consumer.accept(v);
+                vertexConsumer.accept(v);
                 for (int i = 0; i < vector[v].length; i++) {
                     queue.add(vector[v][i]);
                 }
@@ -94,17 +94,17 @@ public class Graph {
         }
     }
 
-    public void depthFirstSearch(int index, Consumer<Integer> consumer) {
+    public void depthFirstSearch(int index, Consumer<Integer> vertexConsumer) {
         Arrays.fill(isUsed, false);
-        depthFirstSearch(adjacencyVector, isUsed, index, consumer);
+        depthFirstSearch(adjacencyVector, isUsed, index, vertexConsumer);
     }
 
-    private void depthFirstSearch(int[][] vector, boolean[] isUsed, int vertex, Consumer<Integer> consumer) {
+    private void depthFirstSearch(int[][] vector, boolean[] isUsed, int vertex, Consumer<Integer> vertexConsumer) {
         if(!isUsed[vertex]) {
             isUsed[vertex] = true;
-            consumer.accept(vertex);
+            vertexConsumer.accept(vertex);
             for (int i = 0; i < vector[vertex].length; i++) {
-                depthFirstSearch(vector, isUsed, vector[vertex][i], consumer);
+                depthFirstSearch(vector, isUsed, vector[vertex][i], vertexConsumer);
             }
         }
     }

@@ -20,6 +20,7 @@
         <module>hw09myHashMap</module>
         <module>hw10graph</module>
         <module>hw11graphSort</module>
+        <module>hw12graphSkeleton</module>
     </modules>
 
     <developers>
