@@ -20,6 +20,7 @@
         <module>hw09myHashMap</module>
         <module>hw10graph</module>
         <module>hw11graphSort</module>
+        <module>hw15archivator</module>
     </modules>
 
     <developers>
@@ -30,8 +31,8 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
         <logback.version>1.2.3</logback.version>
         <slf4j.version>1.7.25</slf4j.version>
         <guava.version>27.1-jre</guava.version>
