@@ -14,13 +14,16 @@
         <module>hw02bitArithmetic</module>
         <module>hw03basicDataStructures</module>
         <module>hw04shellHeapSort</module>
+        <module>hw05billionSort</module>
         <module>hw06avlTree</module>
         <module>hw07randomizedTree</module>
         <module>hw08segmentTree</module>
         <module>hw09myHashMap</module>
         <module>hw10graph</module>
         <module>hw11graphSort</module>
-        <module>hw13graphDistance</module>
+        <module>hw12graphSkeleton</module>
+        <module>hw13graphDistance</module>        
+        <module>hw16dynamicProgramming</module>
     </modules>
 
     <developers>
