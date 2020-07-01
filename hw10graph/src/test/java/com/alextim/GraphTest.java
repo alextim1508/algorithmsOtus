@@ -51,7 +51,7 @@ public class GraphTest {
     @Test
     public void breadthFirstSearchTest() {
         AtomicInteger count = new AtomicInteger();
-        graph.breadthFirstSearch(i -> count.incrementAndGet());
+        graph.breadthFirstSearch(0, i -> count.incrementAndGet());
         Assertions.assertEquals(vectors.length, count.get());
     }
 

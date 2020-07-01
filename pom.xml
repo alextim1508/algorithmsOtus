@@ -14,13 +14,17 @@
         <module>hw02bitArithmetic</module>
         <module>hw03basicDataStructures</module>
         <module>hw04shellHeapSort</module>
+        <module>hw05billionSort</module>
         <module>hw06avlTree</module>
         <module>hw07randomizedTree</module>
         <module>hw08segmentTree</module>
         <module>hw09myHashMap</module>
         <module>hw10graph</module>
         <module>hw11graphSort</module>
-        <module>hw14stringSearch</module>
+        <module>hw12graphSkeleton</module>
+        <module>hw13graphDistance</module>        
+        <module>hw14stringSearch</module>  
+        <module>hw16dynamicProgramming</module>
     </modules>
 
     <developers>
@@ -31,8 +35,8 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
         <logback.version>1.2.3</logback.version>
         <slf4j.version>1.7.25</slf4j.version>
         <guava.version>27.1-jre</guava.version>
@@ -40,6 +44,7 @@
         <junit-platform.version>1.5.0</junit-platform.version>
         <jmh.version>1.21</jmh.version>
         <joou.version>0.9.4</joou.version>
+        <junit-platform.version>1.5.0</junit-platform.version>
     </properties>
 
     <dependencyManagement>
