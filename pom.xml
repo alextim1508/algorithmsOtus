@@ -23,7 +23,8 @@
         <module>hw11graphSort</module>
         <module>hw12graphSkeleton</module>
         <module>hw13graphDistance</module>        
-        <module>hw14stringSearch</module>  
+        <module>hw14stringSearch</module> 
+        <module>hw15archivator</module>
         <module>hw16dynamicProgramming</module>
     </modules>
 
