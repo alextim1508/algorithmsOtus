@@ -9,7 +9,6 @@ public class SortedGraph extends Graph {
 
     public SortedGraph(int[][] adjacencyVector) {
         super(adjacencyVector);
-
     }
 
     public int[][] sort(String algorithm) {
