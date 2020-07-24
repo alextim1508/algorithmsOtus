@@ -6,16 +6,12 @@ import java.nio.ByteBuffer;
 
 public class BloomFilter {
 
-    private int maxKeys;
-    private int keyCount;
-
     private int hashCount;
 
     private long byteSize;
     private ByteBuffer bloom;
 
     public BloomFilter(int maxKeys, double errorRate, int foldFactor) {
-        this.maxKeys = maxKeys;
         long bitSize = computeBitSize(maxKeys, errorRate);
         this.hashCount = computeHashFunctionCount(maxKeys, bitSize);
         this.byteSize = computeBloomFilterSize(bitSize, foldFactor);
@@ -52,7 +48,6 @@ public class BloomFilter {
 
         for (int i = 0; i < this.hashCount; i++)
             set((int) Math.abs((hash1 + i * hash2) % (byteSize * 8)));
-        ++keyCount;
     }
 
     public boolean contains(byte[] buf) {
